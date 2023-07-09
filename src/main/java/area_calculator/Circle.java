@@ -1,6 +1,15 @@
-package area_calculator;
+package OCP.src.main.java.area_calculator;
 
-public class Circle {
+public class Circle implements CalculaterArea {
 
     public Double radius;
+
+    public Circle(Double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double area() {
+        return (22 / 7) * this.radius * this.radius;
+    }
 }
